@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, th, td {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+.feriados-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0;
+  background-color: #4E94BF;
+}
+
+.feriados-hero h1 {
+  font-size: 2.2em;
+  color: white;
+  text-align: center;
+}
+
+.feriados-hero h2 {
+  font-size: 1.6em;
+  padding: 15px 0 20px 0;
+  color: white;
+  text-align: center;
+}
+
+.feriados-hero a {
+  font-size: 1.2em;
+  color: white;
+  font-weight: 600;
+  padding: 15px 25px;
+  background-color: #F3B111;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.feriados-hero a:hover {
+  background-color: #e4a617;
+}
+
+.feriados-countdown {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  background-color: white;
+}
+
+.feriados-countdown h1 {
+  font-size: 72px;
+}
+
+.feriados-countdown h2 {
+  padding: 15px 0;
+}
+
+.feriados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feriados .calendar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  padding: 50px 0 18em 0;
+  gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.feriados .calendar .calendar__container {
+  padding: 0.6em;
+  background-color: white;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.feriados .calendar .calendar__container h2 {
+  padding: 0.6em 0;
+}
+
+.feriados .calendar .calendar__container p {
+  max-width: 322px;
+  margin: 10px 0;
+}
+
+.feriados .calendar .calendar__container .calendar__table {
+  border-spacing: 0;
+  padding: 0.6em 0;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__days {
+  text-align: center;
+  background-color: #00000011;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__days th {
+  width: 50px;
+  padding: 0.6em 0.6em;
+  font-size: 0.9em;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers {
+  text-align: center;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-inamovible {
+  background-color: #F3B111;
+  color: white;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-inamovible:hover {
+  background-color: #e4a617;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-transladable {
+  background-color: #74ACDF;
+  color: white;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-transladable:hover {
+  background-color: #659ed3;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-nolaborable {
+  background-color: #00000050;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr .calendar__feriado-nolaborable:hover {
+  background-color: #00000073;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr td {
+  padding: 0.6em;
+  margin: 0px;
+  font-size: 1em;
+  border-top: solid 1px #00000017;
+}
+
+.feriados .calendar .calendar__container .calendar__table .calendar__numbers tr:nth-of-type(even) {
+  background-color: #00000011;
+}
+
+@media (max-width: 1368px) {
+  .feriados .calendar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feriados .calendar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+
+@media (max-width: 850px) {
+  .feriados .calendar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 90%;
+    gap: 1em;
+    padding: 1em 0 18em 0;
+  }
+  .feriados .calendar .calendar__container {
+    padding: 0;
+    background-color: white;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .feriados .calendar .calendar__container h2 {
+    padding: 0.2em 0;
+  }
+  .feriados-countdown {
+    padding: 25px 0;
+  }
+  .feriados-hero {
+    padding: 25px 5vw;
+  }
+  .feriados-hero h1 {
+    font-size: 1.5em;
+  }
+  .feriados-hero h2 {
+    font-size: 1.2em;
+    padding: 10px 0 15px 0;
+  }
+  .feriados-hero a {
+    font-size: 1em;
+  }
+  .feriados-countdown {
+    padding: 25px 0;
+  }
+  .feriados-countdown h1 {
+    font-size: 2em;
+  }
+  .feriados-countdown h2 {
+    padding: 15px 0;
+  }
+}

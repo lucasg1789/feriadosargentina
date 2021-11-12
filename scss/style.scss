@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, th, td {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+.feriados-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #4E94BF;
+    h1 {
+        font-size: 2.2em;
+        color: white;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.6em;
+        padding: 15px 0 20px 0;
+        color: white;
+        text-align: center;
+    }
+    a {
+        font-size: 1.2em;
+        color: white;
+        font-weight: 600;
+        padding: 15px 25px;
+        background-color: #F3B111;
+        border-radius: 50px;
+        text-decoration: none;
+        &:hover {
+            background-color: #e4a617;
+        }
+    }
+}
+
+.feriados-countdown {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: white;
+    h1 {
+        font-size: 72px;
+    }
+    h2 {
+        padding: 15px 0;
+    }
+    h3 {
+    }
+}
+
+.feriados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
+        padding: 50px 0 18em 0;
+        gap: 30px;
+        align-items: start;
+        .calendar__container{
+            padding: 0.6em;
+            background-color: white;
+            align-self: start;
+            justify-self: center;
+            h2 {
+                padding: 0.6em 0;
+            }
+            p {
+                max-width: 322px;
+                margin: 10px 0;
+            }
+            .calendar__table {
+                border-spacing: 0;
+                padding: 0.6em 0;
+                .calendar__days {
+                    text-align: center;
+                    background-color: #00000011;
+                    th {
+                        width: 50px;
+                        padding: 0.6em 0.6em;
+                        font-size: 0.9em;
+                    }
+                }
+                .calendar__numbers {
+                    text-align: center;
+                    tr { 
+                        .calendar__feriado-inamovible {
+                            background-color: #F3B111;
+                            color: white;
+                            &:hover {
+                                background-color: #e4a617;
+                            }
+                        }
+                        .calendar__feriado-transladable {
+                            background-color: #74ACDF;
+                            color: white;
+                            &:hover {
+                                background-color: #659ed3;
+                            }
+                        }   
+                        .calendar__feriado-nolaborable {
+                            background-color: #00000050;
+                            &:hover {
+                                background-color: #00000073;
+                            }
+                        }   
+                        td {
+                            padding: 0.6em;
+                            margin: 0px;
+                            font-size: 1em;
+                            border-top: solid 1px #00000017;
+                        }
+                    }
+                    tr:nth-of-type(even) {
+                        background-color: #00000011;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1368px) {
+    .feriados {
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .feriados {
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .feriados {
+        .calendar {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+            gap: 1em;
+            padding: 1em 0 18em 0;
+            .calendar__container{
+                padding: 0;
+                background-color: white;
+                align-self: start;
+                justify-self: center;
+                h2 {
+                    padding: 0.2em 0;
+                }
+            }
+        }
+    }
+    .feriados-countdown {
+        padding: 25px 0;
+    }
+    .feriados-hero {
+        padding: 25px 5vw;
+        h1 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 1.2em;
+            padding: 10px 0 15px 0;
+        }
+        a {
+            font-size: 1em;
+        }
+    }
+    .feriados-countdown {
+        padding: 25px 0;
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            padding: 15px 0;
+        }
+        h3 {
+        }
+    }
+}
