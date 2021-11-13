@@ -68,7 +68,7 @@ p, h1, h2, h3, h4, h5, h6, a, th, td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px 0;
+  padding: 35px 0;
   background-color: white;
 }
 
@@ -210,7 +210,7 @@ p, h1, h2, h3, h4, h5, h6, a, th, td {
         grid-template-columns: 1fr;
     width: 90%;
     gap: 1em;
-    padding: 1em 0 18em 0;
+    padding: 1em 0 10em 0;
   }
   .feriados .calendar .calendar__container {
     padding: 0;
